@@ -1,4 +1,4 @@
-import { IWindowDimensionMetrics } from './ResponsiveWatcher'
+import {IWindowDimensionMetrics} from "./index";
 
 export class UtilResponsive {
   public getWindowDimensions = (): IWindowDimensionMetrics => {
