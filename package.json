@@ -1,0 +1,28 @@
+{
+  "name": "responsive-react",
+  "version": "1.0.0",
+  "description": "Device-type based rendering of react components, like render <SideNav> when desktop and <BottomNav> when mobile or tablet",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-responsive",
+    "responsive-react",
+    "breakpoints",
+    "device-based-render",
+    "device-type-based-render",
+    "screen-size-based-render"
+  ],
+  "author": "Austin4Silvers",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.6",
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.17",
+    "typescript": "^3.4.5"
+  }
+}
