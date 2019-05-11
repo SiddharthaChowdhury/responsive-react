@@ -1,11 +1,37 @@
- - Inject `<ResponsiveWatcher/>` in `<App/>` or whatever the root file is
- - use breakPoints as following: 
+ - Inject `<ResponsiveWatcher/>` in `<App/>`, `index` or whatever the root file is
+ - No CSS
+  
+
+[Try the DEMO ](https://codesandbox.io/s/yq84n9x73x)
+ 
+ ## Conditional rendering
  
  ```
+        // Can take either one DeviceType input
         <Responsive displayIn={IdResponsiveRenderOnlyIn.Laptop}>
-          <SideNavigation/>
+            {'This is Desktop/Laptop'}
         </Responsive>
+        
+        // Or, Multiple DeviceType in Array<DeviceType>
         <Responsive displayIn={[IdResponsiveRenderOnlyIn.Mobile, IdResponsiveRenderOnlyIn.Tablet]}>
-          <BottomNavigation/>
+            {'This is either Mobile or Tablet'}>
         </Responsive>
  ```
+ 
+ ## Device information
+ 
+ Use
+ 
+ `const deviceInfo: IDeviceTypeInfo = getDeviceTypeInfo()`
+ 
+ Result object
+ 
+     interface IDeviceTypeInfo {
+         deviceType: IdDeviceType ('Mobile' | 'Tablet' | 'Laptop' | 'LargerThanLaptop'),
+         deviceTypeVariant: IdDeviceTypeBreakdown (Long list),
+         orientation?: IdDeviceOrientation ('Portrait' | 'Landscape'),
+         width: number,
+         height: number
+     }
+     
+ Report issue [HERE](https://github.com/SiddharthaChowdhury/responsive-react/issues)
