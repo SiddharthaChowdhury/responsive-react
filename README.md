@@ -8,6 +8,7 @@ Device-type based rendering of react components (typescript), like render <SideN
 
 [Try the DEMO ](https://codesandbox.io/s/yq84n9x73x)
  
+
  ##Conditional rendering
  
  ```
