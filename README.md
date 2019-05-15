@@ -1,10 +1,14 @@
+#React-TypeScript-Responsive-Component 
+
+Device-type based rendering of react components (typescript), like render <SideNav> when desktop and <BottomNav> when mobile or tablet
+ 
  - Inject `<ResponsiveWatcher/>` in `<App/>`, `index` or whatever the root file is
  - No CSS
   
 
 [Try the DEMO ](https://codesandbox.io/s/yq84n9x73x)
  
- ## Conditional rendering
+ ##Conditional rendering
  
  ```
         // Can take either one DeviceType input
@@ -18,7 +22,7 @@
         </Responsive>
  ```
  
- ## Device information
+ ##Device information
  
  Use
  
