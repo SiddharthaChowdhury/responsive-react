@@ -6,6 +6,9 @@ Device-type based rendering of react components (typescript), like render <SideN
  - No CSS
   
 
+Install: `npm i -S esponsive-react`
+
+
 [Try the DEMO ](https://codesandbox.io/s/yq84n9x73x)
  
 
