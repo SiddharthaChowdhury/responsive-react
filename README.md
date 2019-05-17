@@ -1,7 +1,9 @@
 
 #React-TypeScript-Responsive-Component
 
-  
+
+[![NPM](https://nodei.co/npm/responsive-react.png)](https://nodei.co/npm/responsive-react/)
+
 
 Device-type based rendering of react components (typescript), like render `<SideNav>` when desktop and `<BottomNav>` when mobile or tablet
 

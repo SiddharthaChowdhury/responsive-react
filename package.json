@@ -1,6 +1,6 @@
 {
   "name": "responsive-react",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Device-type based rendering of react components (typescript), like render <SideNav> when desktop and <BottomNav> when mobile or tablet",
   "repository": {
     "type": "git",
