@@ -141,3 +141,27 @@ export const getDeviceTypeInfo = (): IDeviceTypeInfo => {
 
     return buildDeviceDetails;
 }
+
+export const isMobileDevice = (): boolean => {
+    const deviceInformation = getDeviceTypeInfo()
+
+    return deviceInformation.deviceType === IdDeviceType.Mobile
+}
+
+export const isTabletDevice = (): boolean => {
+    const deviceInformation = getDeviceTypeInfo()
+
+    return deviceInformation.deviceType === IdDeviceType.Tablet
+}
+
+export const isLaptopDevice = (): boolean => {
+    const deviceInformation = getDeviceTypeInfo()
+
+    return deviceInformation.deviceType === IdDeviceType.Laptop
+}
+
+export const isBiggerThanLaptop = (): boolean => {
+    const deviceInformation = getDeviceTypeInfo()
+
+    return deviceInformation.deviceType === IdDeviceType.LargerThanLaptop
+}

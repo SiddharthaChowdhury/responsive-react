@@ -7,7 +7,7 @@
 
 Device-type based rendering of react components (typescript), like render `<SideNav>` when desktop and `<BottomNav>` when mobile or tablet
 
-- Inject `<ResponsiveWatcher/>` in `<App/>`, `index` or whatever the root file is
+- Inject `<ResponsiveWatcher/>` in `<App/>`, `index` or whatever the **root file** is. (It watches the device dimention)
 - Conditional rendering
 - No CSS
 
@@ -23,49 +23,62 @@ Device-type based rendering of react components (typescript), like render `<Side
 
 **Conditional rendering**
 
-```
+Can take either one DeviceType input
 
-// Can take either one DeviceType input
 
-<Responsive displayIn={IdResponsiveRenderOnlyIn.Laptop}>
+    <Responsive displayIn={IdResponsiveRenderOnlyIn.Laptop}>
 
-{'This is Desktop/Laptop'}
+        {'This is Desktop/Laptop'}
 
-</Responsive>
+    </Responsive>
 
   
 
-// Or, Multiple DeviceType in Array<DeviceType>
+Or, Multiple DeviceType in Array<DeviceType>
 
-<Responsive displayIn={[IdResponsiveRenderOnlyIn.Mobile, IdResponsiveRenderOnlyIn.Tablet]}>
 
-{'This is either Mobile or Tablet'}>
+    <Responsive displayIn={[IdResponsiveRenderOnlyIn.Mobile, IdResponsiveRenderOnlyIn.Tablet]}>
 
-</Responsive>
+        {'This is either Mobile or Tablet'}>
 
-```
+    </Responsive>
+
+
 <br/>
 
 **Device information**
 
 Use
 
-`const deviceInfo: IDeviceTypeInfo = getDeviceTypeInfo()`
+`getDeviceTypeInfo()`
 
-Result object
+Returns `IDeviceTypeInfo` *(object)* of following info
 
-interface IDeviceTypeInfo {
+    {
+        deviceType: IdDeviceType ('Mobile' | 'Tablet' | 'Laptop' | 'LargerThanLaptop'),
+        deviceTypeVariant: IdDeviceTypeBreakdown (Long list),
+        orientation?: IdDeviceOrientation ('Portrait' | 'Landscape'),
+        width: number,
+        height: number
+    }
 
-deviceType: IdDeviceType ('Mobile' | 'Tablet' | 'Laptop' | 'LargerThanLaptop'),
 
-deviceTypeVariant: IdDeviceTypeBreakdown (Long list),
 
-orientation?: IdDeviceOrientation ('Portrait' | 'Landscape'),
+**Brief & other helper functions**
 
-width: number,
+    +----------------------+-----------------+
+    | Function             | returnType      |
+    +----------------------+-----------------+
+    | getDeviceTypeInfo()  | IDeviceTypeInfo |
+    +----------------------+-----------------+
+    | isMobileDevice()     | boolean         |
+    +----------------------+-----------------+
+    | isTabletDevice()     | boolean         |
+    +----------------------+-----------------+
+    | isLaptopDevice()     | boolean         |
+    +----------------------+-----------------+
+    | isBiggerThanLaptop() | boolean         |  
+    +----------------------+-----------------+
 
-height: number
-
-}
 
 Report issue [HERE](https://github.com/SiddharthaChowdhury/responsive-react/issues)
