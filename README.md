@@ -1,4 +1,3 @@
-
 #React-TypeScript-Responsive-Component
 
 
@@ -7,19 +6,13 @@
 
 Device-type based rendering of react components (typescript), like render `<SideNav>` when desktop and `<BottomNav>` when mobile or tablet
 
-- Inject `<ResponsiveWatcher/>` in `<App/>`, `index` or whatever the **root file** is. (It watches the device dimention)
 - Conditional rendering
 - No CSS
 
 <br/>
 
-**`npm i -S responsive-react`**
+[Try the DEMO ](https://codesandbox.io/s/yq84n9x73x) (deprecated)
 
-<br/>
-
-[Try the DEMO ](https://codesandbox.io/s/yq84n9x73x)
-
-  
 
 **Conditional rendering**
 
@@ -66,19 +59,21 @@ Returns `IDeviceTypeInfo` *(object)* of following info
 
 **Brief & other helper functions**
 
-    +----------------------+-----------------+
-    | Function             | returnType      |
-    +----------------------+-----------------+
-    | getDeviceTypeInfo()  | IDeviceTypeInfo |
-    +----------------------+-----------------+
-    | isMobileDevice()     | boolean         |
-    +----------------------+-----------------+
-    | isTabletDevice()     | boolean         |
-    +----------------------+-----------------+
-    | isLaptopDevice()     | boolean         |
-    +----------------------+-----------------+
-    | isBiggerThanLaptop() | boolean         |  
-    +----------------------+-----------------+
+    +----------------------+-------------------------+
+    | Function             | returnType              |
+    +----------------------+-------------------------+
+    | getDeviceTypeInfo()  | IDeviceTypeInfo         |
+    +----------------------+-------------------------+
+    | getWindowDimension() | IWindowDimensionMetrics |
+    +----------------------+-------------------------+
+    | isMobileDevice()     | boolean                 |
+    +----------------------+-------------------------+
+    | isTabletDevice()     | boolean                 |
+    +----------------------+-------------------------+
+    | isLaptopDevice()     | boolean                 |
+    +----------------------+-------------------------+
+    | isBiggerThanLaptop() | boolean                 |  
+    +----------------------+-------------------------+
 
 
 Report issue [HERE](https://github.com/SiddharthaChowdhury/responsive-react/issues)
