@@ -9,16 +9,12 @@ Device-type based rendering of react components (typescript), like render `<Side
 - Conditional rendering
 - No CSS
 
-<br/>
-
-[Try the DEMO ](https://codesandbox.io/s/yq84n9x73x) (deprecated)
-
-
 **Conditional rendering**
 
-Can take either one DeviceType input
+Can take either one DeviceType input ([**DEMO**](https://codesandbox.io/s/shy-wood-pgjwt?fontsize=14))
 
-
+    import { IdResponsiveRenderOnlyIn, Responsive } from "responsive-react";
+    ...
     <Responsive displayIn={IdResponsiveRenderOnlyIn.Laptop}>
 
         {'This is Desktop/Laptop'}
@@ -29,7 +25,8 @@ Can take either one DeviceType input
 
 Or, Multiple DeviceType in Array<DeviceType>
 
-
+    import { IdResponsiveRenderOnlyIn, Responsive } from "responsive-react";
+    ...
     <Responsive displayIn={[IdResponsiveRenderOnlyIn.Mobile, IdResponsiveRenderOnlyIn.Tablet]}>
 
         {'This is either Mobile or Tablet'}>
@@ -41,11 +38,9 @@ Or, Multiple DeviceType in Array<DeviceType>
 
 **Device information**
 
-Use
+Use `getDeviceTypeInfo()`
 
-`getDeviceTypeInfo()`
-
-Returns `IDeviceTypeInfo` *(object)* of following info
+Returns `IDeviceTypeInfo` *(object)* with following info
 
     {
         deviceType: IdDeviceType ('Mobile' | 'Tablet' | 'Laptop' | 'LargerThanLaptop'),
@@ -57,8 +52,19 @@ Returns `IDeviceTypeInfo` *(object)* of following info
 
 
 
-**Brief & other helper functions**
+**Other helper functions**
 
+    import {
+        IDeviceTypeInfo, 
+        IWindowDimensionMetrics
+    } from "responsive-react/dist/types"; // Type imports
+    
+    import {
+        getDeviceTypeInfo, 
+        getWindowDimension, 
+        isMobileDevice
+     } from "responsive-react/dist/utilResponsive";
+    
     +----------------------+-------------------------+
     | Function             | returnType              |
     +----------------------+-------------------------+
