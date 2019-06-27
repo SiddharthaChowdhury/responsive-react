@@ -1,7 +1,15 @@
 import * as React from 'react'
-import {IdResponsiveRenderOnlyIn, IWindowDimensionMetrics} from "./util/types";
-import {getWindowDimension} from "./util/utilResponsive";
-import {IdDeviceBreakpointsByWidth, IdMobileHeight} from "./util/ids";
+import {IWindowDimensionMetrics} from "./types";
+import {getWindowDimension} from "./utilResponsive";
+import {IdDeviceBreakpointsByWidth, IdMobileHeight} from "./ids";
+
+export enum IdResponsiveRenderOnlyIn {
+  Mobile = 'Mobile',
+  MobilePortrait = 'MobilePortrait',
+  MobileLandScape = 'MobileLandScape',
+  Tablet = 'Tablet',
+  Laptop = 'Laptop'
+}
 
 interface IResponsiveState extends IWindowDimensionMetrics {
   height: number;
